@@ -1,3 +1,37 @@
+<?php
+/* connection establishment with database
+requirements: mysqli_connect("ServerName", "Username", "Password", "DATABASE");
+*/
+
+$connection = mysqli_connect("localhost", "root", "", "classb1");
+if(!$connection){
+    echo "connection failed";
+}
+
+if(isset($_POST['submit'])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $pass = $_POST['pass'];
+
+    $query = "INSERT into `user-registration` (`name`, `email`, `password`) VALUES ('$name', '$email', ' $pass')";
+
+    $result = mysqli_query($connection, $query);
+
+    if(!$result){
+        echo "query failed";
+    }
+
+
+}
+
+
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +44,7 @@
 <body>
     <div class="container mt-3">
     
-<form action="test.php" method="GET" class="form-group">
+<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST" class="form-group">
 <label for="name"> Username </label>
 <input type="text" name="name" required class="form-control">
 <br>

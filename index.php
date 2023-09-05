@@ -176,6 +176,35 @@ echo "<br>";
 }
 
 
+// Multidimensional associative array
+
+
+$progress = [
+    "Ali" => ["maths" => 33, "physics" => 55, "English" => 50],
+    "Ehtisham" => ["maths" => 77, "physics" => 88, "English" => 55],
+    "usman" => ["maths" => 99, "physics" => 55, "English" => 77]
+];
+
+// print_r($progress["Ali"]);
+// echo $progress["Ali"]["physics"];
+
+foreach ($progress as $key => $value) {
+    echo "<h3> $key </h3> ". "<br>";
+    foreach ($value as $k => $v) {
+        echo "$k  =   $v <br>";
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

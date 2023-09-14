@@ -1,12 +1,8 @@
 <?php
-/* connection establishment with database
-requirements: mysqli_connect("ServerName", "Username", "Password", "DATABASE");
-*/
+include('header.php');
+require('config.php');
 
-$connection = mysqli_connect("localhost", "root", "", "classb1");
-if(!$connection){
-    echo "connection failed";
-}
+
 
 if(isset($_POST['submit'])){
     $name = $_POST['name'];

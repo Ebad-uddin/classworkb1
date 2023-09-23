@@ -1,4 +1,5 @@
 <?php
+include('header.php');
 include("config.php");
 
 if(isset($_POST['submit'])){
@@ -37,6 +38,7 @@ if(isset($_POST['submit'])){
 </head>
 <body>
     <div class="container mt-3">
+        <h1> Registration Form </h1>
     
 <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST" class="form-group">
 <label for="name"> Username </label>
@@ -48,7 +50,7 @@ if(isset($_POST['submit'])){
 <label for="pass"> Password </label>
 <input type="password" name="pass" required class="form-control">
 <br>
-<input type="submit" name="submit" value="Register">
+<input class="btn btn-primary" type="submit" name="submit" value="Register">
 </form>
 
 

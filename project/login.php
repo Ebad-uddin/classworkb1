@@ -6,7 +6,7 @@ if(isset($_POST['submit'])){
     $log_email = $_POST['login_email'];
     $log_pass = $_POST['login_pass'];
 
-    $fetch_db_info = "SELECT * from `userdetails` where email = '$log_email'";
+    $fetch_db_info = "SELECT * from `admin` where email = '$log_email'";
 
     $run_query = mysqli_query($connection, $fetch_db_info);
 
